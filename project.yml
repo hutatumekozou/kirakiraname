@@ -1,0 +1,22 @@
+name: 0925キラキラネームクイズ
+options:
+  minimumXcodeGenVersion: 2.32.0
+  deploymentTarget:
+    iOS: "16.0"
+targets:
+  0925キラキラネームクイズ:
+    type: application
+    platform: iOS
+    deploymentTarget: "16.0"
+    sources:
+      - path: .
+        excludes:
+          - project.yml
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.example.kirakira.quiz0925
+      PRODUCT_NAME: 0925キラキラネームクイズ
+      INFOPLIST_FILE: Info.plist
+      SWIFT_VERSION: 5.0
+      TARGETED_DEVICE_FAMILY: 1
+    scheme:
+      testTargets: []
