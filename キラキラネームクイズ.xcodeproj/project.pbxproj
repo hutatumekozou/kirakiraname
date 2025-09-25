@@ -3,460 +3,121 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 63;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		051AC36654A33D2BECD0D97D /* commit-msg.sample in Resources */ = {isa = PBXBuildFile; fileRef = 8D6BB24BEC52BC29E8DC5FC2 /* commit-msg.sample */; };
-		08F9318C4A86E2225EC65697 /* pre-merge-commit.sample in Resources */ = {isa = PBXBuildFile; fileRef = FEAD04892ACCDF9F5EC5E823 /* pre-merge-commit.sample */; };
-		09D28DD8E2EDDEA0DDF1A5FF /* coordinator_1.json in Resources */ = {isa = PBXBuildFile; fileRef = CE4F3347E28187F69D41682C /* coordinator_1.json */; };
-		1227A066027E2906E95D558E /* update.sample in Resources */ = {isa = PBXBuildFile; fileRef = 87E2AA3C7EE5C4D80D1758D3 /* update.sample */; };
-		1A7E29921E03E21F272ECBE0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D05D74C8F3C4277EB4F7CF9 /* ContentView.swift */; };
-		1B45B64A08FC32F831BD65FE /* pre-push.sample in Resources */ = {isa = PBXBuildFile; fileRef = 464F0476342E96CE27EC504E /* pre-push.sample */; };
-		1EECB2BB7D2374D862DE7E4F /* counseling_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F796F48E98FBF8E52E3EDE2 /* counseling_1.json */; };
-		29EE8606EA292C587D646611 /* environment_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 299DA27A3DAEAFA9B7E1A895 /* environment_2.json */; };
-		2C24364FC9765315805ACDE3 /* settings.local.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BDF5B3FB33FAC1BDCBF4EB5 /* settings.local.json */; };
-		2C4098F507015B977F15A12D /* health_2.json in Resources */ = {isa = PBXBuildFile; fileRef = C1E0DF9967BF9E062EC14B66 /* health_2.json */; };
-		2E869811ED9104CD0571D9D4 /* personal_data_obligations.json.bak-20250923-132228 in Resources */ = {isa = PBXBuildFile; fileRef = 2870C6C4FF27B94BDFEABE53 /* personal_data_obligations.json.bak-20250923-132228 */; };
-		2EE348C18AD14056A9B543A9 /* QuizRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DF5A5EFB2C8462D257239 /* QuizRepository.swift */; };
-		30990DE2DB658F624424F972 /* office_physical_security.json in Resources */ = {isa = PBXBuildFile; fileRef = 36F883C84DBCCF1A6EDEB352 /* office_physical_security.json */; };
-		4AEEE87B8CB057C518C18DC4 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C49D362D353856B4A4951EF /* ResultView.swift */; };
-		4D36C180EB9024FB84DEAD9A /* personal_data_obligations.json.bak-20250923-165107 in Resources */ = {isa = PBXBuildFile; fileRef = EB07B5BFA4EF3EE0EAB509B3 /* personal_data_obligations.json.bak-20250923-165107 */; };
-		52B32458C8F1F17A3F5D0CB4 /* personal_data_obligations.json in Resources */ = {isa = PBXBuildFile; fileRef = B4B4120653528D192787B338 /* personal_data_obligations.json */; };
-		5D98B707462428DA586E43C5 /* applypatch-msg.sample in Resources */ = {isa = PBXBuildFile; fileRef = 59684F2C057633B13EB8C498 /* applypatch-msg.sample */; };
-		66D595906CFB6FF5C3B793BF /* woman_illustration.png in Resources */ = {isa = PBXBuildFile; fileRef = 50C8B6F4BC05EADC77B5873A /* woman_illustration.png */; };
-		671C8A9A2724B3D5714E9829 /* general_legal_system.json in Resources */ = {isa = PBXBuildFile; fileRef = 71FFEB9702104F313134F149 /* general_legal_system.json */; };
-		67B880EFD02C156952D33202 /* CLAUDE.md in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC6C15532EEE09C000F4E3 /* CLAUDE.md */; };
-		6D1917C788350B0CACF7107E /* push-to-checkout.sample in Resources */ = {isa = PBXBuildFile; fileRef = 5210AEB62B42625064EB0FB9 /* push-to-checkout.sample */; };
-		6FF56679A7A8AD326E5521C2 /* pre-applypatch.sample in Resources */ = {isa = PBXBuildFile; fileRef = CDDA3771B76AAF151437251E /* pre-applypatch.sample */; };
-		72E00477D2E4C4AFAACADA1E /* AdsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58431E7A638925B07BBE6D7F /* AdsManager.swift */; };
-		73457B01C63833C00C8D94F1 /* personal_data_obligations.json.bak-20250923-125252 in Resources */ = {isa = PBXBuildFile; fileRef = D686FF7C036F25B1C4783204 /* personal_data_obligations.json.bak-20250923-125252 */; };
-		748245EAAFE786D48E4DC3E6 /* coordinator_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 4602C7A3D34CB32272E10EC8 /* coordinator_2.json */; };
-		7B6DD74E21307BCB072DB11D /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE43CDAFDF685820C2839420 /* QuizView.swift */; };
-		7C82E8199663978C55FC413D /* personal_data_duties.json in Resources */ = {isa = PBXBuildFile; fileRef = 835933D52AB570B036486A28 /* personal_data_duties.json */; };
-		84D15FA2B068F553F4BBF36B /* welfare_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 6BB302CB13D2274B45659D55 /* welfare_1.json */; };
-		86713188CB18F56BC83935B8 /* 0925キラキラネームクイズApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1729BCC092C8919330A3CA /* 0925キラキラネームクイズApp.swift */; };
-		8793C4097FD37C53F36AC4DD /* counseling_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 90E4D449F4F3DF83C8F2C85E /* counseling_2.json */; };
-		8A1F77BA35E7EDC7F630C613 /* pack-34fbee71c66eb81957948609396a5761b12397a5.idx in Resources */ = {isa = PBXBuildFile; fileRef = 069787625099A5C294AF67FF /* pack-34fbee71c66eb81957948609396a5761b12397a5.idx */; };
-		9496C9D896256C9CF9E5253D /* privacy_law_understanding.json in Resources */ = {isa = PBXBuildFile; fileRef = 32D025C75DC4EBC0ED681258 /* privacy_law_understanding.json */; };
-		9B9F56820D94F7E262437C02 /* prepare-commit-msg.sample in Resources */ = {isa = PBXBuildFile; fileRef = 07889D8B40DDE3EDFEF7B61B /* prepare-commit-msg.sample */; };
-		9C11FCB42EB7EFE610315D8E /* organizational_human_security.json in Resources */ = {isa = PBXBuildFile; fileRef = 659B0D8592A519C7B77EB8F1 /* organizational_human_security.json */; };
-		A95EE0261003A323C711BB0B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B251722C6DF9BD8938A217 /* HomeView.swift */; };
-		AF3519F9255569F5C7DF515E /* environment_1.json in Resources */ = {isa = PBXBuildFile; fileRef = A486378DF17AEC2B79383213 /* environment_1.json */; };
-		AFD7E5C5CA222BA845A214A2 /* health_1.json in Resources */ = {isa = PBXBuildFile; fileRef = BB8C5CAE19AA46DA42FDE73E /* health_1.json */; };
-		B1724F98DB11230504B39DA7 /* threat_and_countermeasures.json in Resources */ = {isa = PBXBuildFile; fileRef = 59A039D0EBD2C276150FC5C2 /* threat_and_countermeasures.json */; };
-		B71E92001A212ABF8668C746 /* 個人情報保護実務検定2級.xcodeproj in Resources */ = {isa = PBXBuildFile; fileRef = CD08981046CDB04108C0BB79 /* 個人情報保護実務検定2級.xcodeproj */; };
-		C298CD3485C744DDB0C9F41E /* fsmonitor-watchman.sample in Resources */ = {isa = PBXBuildFile; fileRef = 32282BA1F78B7C82E312BF8D /* fsmonitor-watchman.sample */; };
-		C74D6763A411047ECA2D34CA /* FK2QuizApp.xcodeproj in Resources */ = {isa = PBXBuildFile; fileRef = 3B8BB037439C24137B67A97F /* FK2QuizApp.xcodeproj */; };
-		CCA51D44E9508629E4771E6E /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D891B11D01810D5C180C441 /* TopViewController.swift */; };
-		D3DAD1F3B76090D5ACF108F0 /* pack-34fbee71c66eb81957948609396a5761b12397a5.pack in Resources */ = {isa = PBXBuildFile; fileRef = 768337816DD553AF7C46D721 /* pack-34fbee71c66eb81957948609396a5761b12397a5.pack */; };
-		D659E5956D8B12D3DD1B743B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3F468B9A16FBC63347DDFD0 /* Info.plist */; };
-		D9D1066FB74A85D95C275B07 /* QuizTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B3ACD14973D373E0228E1B /* QuizTopic.swift */; };
-		DA0A1E18879FA95B9489C6EA /* welfare_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 6C8FF0AD540C9DCAB1B4DBC4 /* welfare_2.json */; };
-		DA91E3D20DBFE2A4FC79E053 /* pre-commit.sample in Resources */ = {isa = PBXBuildFile; fileRef = 65B2F30A7844B0244772955A /* pre-commit.sample */; };
-		DFF5E51A6B9655B0705D0F2E /* pre-receive.sample in Resources */ = {isa = PBXBuildFile; fileRef = 34D2FE2D8DE41DB59B487554 /* pre-receive.sample */; };
-		E1B00D77BC9D370B9A58F7AE /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79478E7D658010081729B7E /* Question.swift */; };
-		E78E807D1B59C116B8E80E4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9463F620509EB6AC3724A2 /* AppDelegate.swift */; };
-		EC074EF2C4F44CFEACDB943B /* AppMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D321E0989E99A02EF7F3308 /* AppMain.swift */; };
-		F03A13D2B58A401BC602B5AD /* pre-rebase.sample in Resources */ = {isa = PBXBuildFile; fileRef = 4FE608505C9E990B455CAA33 /* pre-rebase.sample */; };
-		F28F2BBE27E3929DA1D4C772 /* personal_related_information.json in Resources */ = {isa = PBXBuildFile; fileRef = 6104C90FCC16FD103E8756A0 /* personal_related_information.json */; };
-		F8BEA31FDAB891A73CFF37F2 /* post-update.sample in Resources */ = {isa = PBXBuildFile; fileRef = 60A166F195940D9BB4F45D61 /* post-update.sample */; };
-		FD9D0405A8D63A931041F299 /* FK2QuizApp.xcworkspace in Resources */ = {isa = PBXBuildFile; fileRef = F615471D4F5D8EAA6A428481 /* FK2QuizApp.xcworkspace */; };
+		1DFB72CD5111EC6CE236E47B /* QuizCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81591C419E644E29C2669B /* QuizCategory.swift */; };
+		1FFA58C3575D0DD69DE81AAF /* キラキラネームクイズApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFA514E93AF6A9082732CA8 /* キラキラネームクイズApp.swift */; };
+		28F37659647EC2E7BD49B6E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1D344F202B20E5002B301D /* ContentView.swift */; };
+		5F027084BA66AB90958989E6 /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 91206F7CB6934DEE36BD1C26 /* questions.json */; };
+		6EC97B00F0E92A370E297CF7 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1184B95660CEF7F07346C99 /* QuizView.swift */; };
+		98323504EAD28C14BFAA245F /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D926378C70C3BB4A557A892A /* ResultView.swift */; };
+		B60B02A419405C29AC9D79C6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D35E327F2A4ECB7733B30A5 /* HomeView.swift */; };
+		CCEBEDE7964AC55B4B500005 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92119019E3BE6B806C0C5AA8 /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		069787625099A5C294AF67FF /* pack-34fbee71c66eb81957948609396a5761b12397a5.idx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pack-34fbee71c66eb81957948609396a5761b12397a5.idx"; sourceTree = "<group>"; };
-		07889D8B40DDE3EDFEF7B61B /* prepare-commit-msg.sample */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "prepare-commit-msg.sample"; sourceTree = "<group>"; };
-		0BDF5B3FB33FAC1BDCBF4EB5 /* settings.local.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = settings.local.json; sourceTree = "<group>"; };
-		0F796F48E98FBF8E52E3EDE2 /* counseling_1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = counseling_1.json; sourceTree = "<group>"; };
-		189DF5A5EFB2C8462D257239 /* QuizRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRepository.swift; sourceTree = "<group>"; };
-		2020EEF0EDCBCFD413918082 /* HEAD */ = {isa = PBXFileReference; lastKnownFileType = text; path = HEAD; sourceTree = "<group>"; };
-		23B3ACD14973D373E0228E1B /* QuizTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTopic.swift; sourceTree = "<group>"; };
-		2870C6C4FF27B94BDFEABE53 /* personal_data_obligations.json.bak-20250923-132228 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "personal_data_obligations.json.bak-20250923-132228"; sourceTree = "<group>"; };
-		299DA27A3DAEAFA9B7E1A895 /* environment_2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = environment_2.json; sourceTree = "<group>"; };
-		2FB0F28EC88824BE72773B21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		32282BA1F78B7C82E312BF8D /* fsmonitor-watchman.sample */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = "fsmonitor-watchman.sample"; sourceTree = "<group>"; };
-		32D025C75DC4EBC0ED681258 /* privacy_law_understanding.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = privacy_law_understanding.json; sourceTree = "<group>"; };
-		34D2FE2D8DE41DB59B487554 /* pre-receive.sample */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pre-receive.sample"; sourceTree = "<group>"; };
-		36F883C84DBCCF1A6EDEB352 /* office_physical_security.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = office_physical_security.json; sourceTree = "<group>"; };
-		3B8BB037439C24137B67A97F /* FK2QuizApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = FK2QuizApp.xcodeproj; sourceTree = "<group>"; };
-		3C49D362D353856B4A4951EF /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
-		4602C7A3D34CB32272E10EC8 /* coordinator_2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = coordinator_2.json; sourceTree = "<group>"; };
-		464F0476342E96CE27EC504E /* pre-push.sample */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pre-push.sample"; sourceTree = "<group>"; };
-		4ACE3A112B4B5A08A1495EFE /* HEAD */ = {isa = PBXFileReference; lastKnownFileType = text; path = HEAD; sourceTree = "<group>"; };
-		4F9D31A60B78A4AFC23CA71F /* packed-refs */ = {isa = PBXFileReference; lastKnownFileType = text; path = "packed-refs"; sourceTree = "<group>"; };
-		4FE608505C9E990B455CAA33 /* pre-rebase.sample */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pre-rebase.sample"; sourceTree = "<group>"; };
-		50C8B6F4BC05EADC77B5873A /* woman_illustration.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = woman_illustration.png; sourceTree = "<group>"; };
-		5210AEB62B42625064EB0FB9 /* push-to-checkout.sample */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "push-to-checkout.sample"; sourceTree = "<group>"; };
-		55C536A28BE351A7C8FA1327 /* config */ = {isa = PBXFileReference; lastKnownFileType = text; path = config; sourceTree = "<group>"; };
-		58431E7A638925B07BBE6D7F /* AdsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsManager.swift; sourceTree = "<group>"; };
-		59684F2C057633B13EB8C498 /* applypatch-msg.sample */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "applypatch-msg.sample"; sourceTree = "<group>"; };
-		59A039D0EBD2C276150FC5C2 /* threat_and_countermeasures.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = threat_and_countermeasures.json; sourceTree = "<group>"; };
-		5D05D74C8F3C4277EB4F7CF9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		5E4B4A3DC83D69B77FF1B6D9 /* main */ = {isa = PBXFileReference; lastKnownFileType = text; path = main; sourceTree = "<group>"; };
-		60A166F195940D9BB4F45D61 /* post-update.sample */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "post-update.sample"; sourceTree = "<group>"; };
-		6104C90FCC16FD103E8756A0 /* personal_related_information.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = personal_related_information.json; sourceTree = "<group>"; };
-		659B0D8592A519C7B77EB8F1 /* organizational_human_security.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = organizational_human_security.json; sourceTree = "<group>"; };
-		65B2F30A7844B0244772955A /* pre-commit.sample */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pre-commit.sample"; sourceTree = "<group>"; };
-		668E4B180750296CA219DE39 /* main */ = {isa = PBXFileReference; lastKnownFileType = text; path = main; sourceTree = "<group>"; };
-		6BB302CB13D2274B45659D55 /* welfare_1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = welfare_1.json; sourceTree = "<group>"; };
-		6C8FF0AD540C9DCAB1B4DBC4 /* welfare_2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = welfare_2.json; sourceTree = "<group>"; };
-		71FFEB9702104F313134F149 /* general_legal_system.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = general_legal_system.json; sourceTree = "<group>"; };
-		75C7EF3A6DC9548EC5471AC4 /* 0925キラキラネームクイズ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "0925キラキラネームクイズ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		768337816DD553AF7C46D721 /* pack-34fbee71c66eb81957948609396a5761b12397a5.pack */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pack-34fbee71c66eb81957948609396a5761b12397a5.pack"; sourceTree = "<group>"; };
-		7A91B5C245F5CC6B4C6C177C /* HEAD */ = {isa = PBXFileReference; lastKnownFileType = text; path = HEAD; sourceTree = "<group>"; };
-		7DEEB0BBE47D30A630A237CB /* exclude */ = {isa = PBXFileReference; lastKnownFileType = text; path = exclude; sourceTree = "<group>"; };
-		7DFC6C15532EEE09C000F4E3 /* CLAUDE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CLAUDE.md; sourceTree = "<group>"; };
-		835933D52AB570B036486A28 /* personal_data_duties.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = personal_data_duties.json; sourceTree = "<group>"; };
-		87E2AA3C7EE5C4D80D1758D3 /* update.sample */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = update.sample; sourceTree = "<group>"; };
-		8D6BB24BEC52BC29E8DC5FC2 /* commit-msg.sample */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "commit-msg.sample"; sourceTree = "<group>"; };
-		90E4D449F4F3DF83C8F2C85E /* counseling_2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = counseling_2.json; sourceTree = "<group>"; };
-		963C407A00FAF68EE694A686 /* index */ = {isa = PBXFileReference; lastKnownFileType = file; path = index; sourceTree = "<group>"; };
-		9D321E0989E99A02EF7F3308 /* AppMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMain.swift; sourceTree = "<group>"; };
-		9D891B11D01810D5C180C441 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
-		A486378DF17AEC2B79383213 /* environment_1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = environment_1.json; sourceTree = "<group>"; };
-		AA1729BCC092C8919330A3CA /* 0925キラキラネームクイズApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "0925キラキラネームクイズApp.swift"; sourceTree = "<group>"; };
-		AE43CDAFDF685820C2839420 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
-		B4B251722C6DF9BD8938A217 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		B4B4120653528D192787B338 /* personal_data_obligations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = personal_data_obligations.json; sourceTree = "<group>"; };
-		BB8C5CAE19AA46DA42FDE73E /* health_1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = health_1.json; sourceTree = "<group>"; };
-		C1E0DF9967BF9E062EC14B66 /* health_2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = health_2.json; sourceTree = "<group>"; };
-		C51CDA7C4A985FFCB82EDF1D /* description */ = {isa = PBXFileReference; lastKnownFileType = text; path = description; sourceTree = "<group>"; };
-		CD08981046CDB04108C0BB79 /* 個人情報保護実務検定2級.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "個人情報保護実務検定2級.xcodeproj"; sourceTree = "<group>"; };
-		CDDA3771B76AAF151437251E /* pre-applypatch.sample */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pre-applypatch.sample"; sourceTree = "<group>"; };
-		CE4F3347E28187F69D41682C /* coordinator_1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = coordinator_1.json; sourceTree = "<group>"; };
-		D686FF7C036F25B1C4783204 /* personal_data_obligations.json.bak-20250923-125252 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "personal_data_obligations.json.bak-20250923-125252"; sourceTree = "<group>"; };
-		E3F468B9A16FBC63347DDFD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		E79478E7D658010081729B7E /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		EB07B5BFA4EF3EE0EAB509B3 /* personal_data_obligations.json.bak-20250923-165107 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "personal_data_obligations.json.bak-20250923-165107"; sourceTree = "<group>"; };
-		EF9463F620509EB6AC3724A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F2FF281AE8527784E3B9EEB6 /* HEAD */ = {isa = PBXFileReference; lastKnownFileType = text; path = HEAD; sourceTree = "<group>"; };
-		F615471D4F5D8EAA6A428481 /* FK2QuizApp.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = FK2QuizApp.xcworkspace; sourceTree = "<group>"; };
-		FEAD04892ACCDF9F5EC5E823 /* pre-merge-commit.sample */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pre-merge-commit.sample"; sourceTree = "<group>"; };
+		0FFA514E93AF6A9082732CA8 /* キラキラネームクイズApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "キラキラネームクイズApp.swift"; sourceTree = "<group>"; };
+		1D35E327F2A4ECB7733B30A5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3CCEB09CE963EA3AA684E8BC /* キラキラネームクイズ.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "キラキラネームクイズ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A1D344F202B20E5002B301D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		91206F7CB6934DEE36BD1C26 /* questions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
+		92119019E3BE6B806C0C5AA8 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		9C81591C419E644E29C2669B /* QuizCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCategory.swift; sourceTree = "<group>"; };
+		D1184B95660CEF7F07346C99 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		D926378C70C3BB4A557A892A /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		F950C6F33E9E1550FD35CD0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		053A25E5CD1B4609DC18F805 /* Sources */ = {
+		03DF2AA153197D844131FEF4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				58431E7A638925B07BBE6D7F /* AdsManager.swift */,
-				EF9463F620509EB6AC3724A2 /* AppDelegate.swift */,
-				9D321E0989E99A02EF7F3308 /* AppMain.swift */,
-				440BB5446996BAA2422F452A /* Models */,
-				CFBD906682BF518A514F6643 /* Repository */,
-				4031340FF237B61EF62A71F8 /* Utils */,
-				99C32680FBE20C353A009D34 /* Views */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		136081F2D22CD97A301442C8 /* kojinhogojitumu2kyuu */ = {
-			isa = PBXGroup;
-			children = (
-				7DFC6C15532EEE09C000F4E3 /* CLAUDE.md */,
-				3B8BB037439C24137B67A97F /* FK2QuizApp.xcodeproj */,
-				F615471D4F5D8EAA6A428481 /* FK2QuizApp.xcworkspace */,
-				CD08981046CDB04108C0BB79 /* 個人情報保護実務検定2級.xcodeproj */,
-				2399AA3E058DCE2AC7B0690F /* .claude */,
-				1EE69EFD069531F55E07AE27 /* .git */,
-				CAF6FB539E35F7A8F147A89F /* Resources */,
-				053A25E5CD1B4609DC18F805 /* Sources */,
-			);
-			path = kojinhogojitumu2kyuu;
-			sourceTree = "<group>";
-		};
-		1397D3E29813CE75B35CF36A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				75C7EF3A6DC9548EC5471AC4 /* 0925キラキラネームクイズ.app */,
+				3CCEB09CE963EA3AA684E8BC /* キラキラネームクイズ.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1DE024012E84E88A0041EA39 /* Products */ = {
+		3F9BF87587928D50944E5091 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		1EE69EFD069531F55E07AE27 /* .git */ = {
-			isa = PBXGroup;
-			children = (
-				55C536A28BE351A7C8FA1327 /* config */,
-				C51CDA7C4A985FFCB82EDF1D /* description */,
-				7A91B5C245F5CC6B4C6C177C /* HEAD */,
-				963C407A00FAF68EE694A686 /* index */,
-				4F9D31A60B78A4AFC23CA71F /* packed-refs */,
-				FC34635009922F207ECEEDD2 /* hooks */,
-				46228FE2A8C4EBF129A5F3A9 /* info */,
-				6142B351D3FB7DF89FC4D98B /* logs */,
-				FF9E4EA21F02CBF6890B65CD /* objects */,
-				3A6BA558237175036D62D198 /* refs */,
-			);
-			path = .git;
-			sourceTree = "<group>";
-		};
-		21B37BE3E30E6705D0DC5A2A = {
-			isa = PBXGroup;
-			children = (
-				7BB57293285621A5AECB4119 /* 0925キラキラネームクイズ */,
-				136081F2D22CD97A301442C8 /* kojinhogojitumu2kyuu */,
-				1397D3E29813CE75B35CF36A /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		2399AA3E058DCE2AC7B0690F /* .claude */ = {
-			isa = PBXGroup;
-			children = (
-				0BDF5B3FB33FAC1BDCBF4EB5 /* settings.local.json */,
-			);
-			path = .claude;
-			sourceTree = "<group>";
-		};
-		29BA82A87A1E1DA57CD2107B /* pack */ = {
-			isa = PBXGroup;
-			children = (
-				069787625099A5C294AF67FF /* pack-34fbee71c66eb81957948609396a5761b12397a5.idx */,
-				768337816DD553AF7C46D721 /* pack-34fbee71c66eb81957948609396a5761b12397a5.pack */,
-			);
-			path = pack;
-			sourceTree = "<group>";
-		};
-		2A20D1B9BDCE3BB5AD371B6A /* remotes */ = {
-			isa = PBXGroup;
-			children = (
-				A9CC309EECEEA5A5FB327010 /* origin */,
-			);
-			path = remotes;
-			sourceTree = "<group>";
-		};
-		37EDDCDF29424A10D2C7F3CA /* heads */ = {
-			isa = PBXGroup;
-			children = (
-				5E4B4A3DC83D69B77FF1B6D9 /* main */,
-			);
-			path = heads;
-			sourceTree = "<group>";
-		};
-		3A6BA558237175036D62D198 /* refs */ = {
-			isa = PBXGroup;
-			children = (
-				E87D79A7B78E3ECAA27FFDCF /* heads */,
-				DD8A4E07CCF5DEFE61602AF6 /* remotes */,
-			);
-			path = refs;
-			sourceTree = "<group>";
-		};
-		4031340FF237B61EF62A71F8 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				9D891B11D01810D5C180C441 /* TopViewController.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		440BB5446996BAA2422F452A /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				E79478E7D658010081729B7E /* Question.swift */,
-				23B3ACD14973D373E0228E1B /* QuizTopic.swift */,
+				92119019E3BE6B806C0C5AA8 /* Question.swift */,
+				9C81591C419E644E29C2669B /* QuizCategory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		46228FE2A8C4EBF129A5F3A9 /* info */ = {
+		4F53B04D0FBEF7C6F91B7A90 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7DEEB0BBE47D30A630A237CB /* exclude */,
-			);
-			path = info;
-			sourceTree = "<group>";
-		};
-		6142B351D3FB7DF89FC4D98B /* logs */ = {
-			isa = PBXGroup;
-			children = (
-				2020EEF0EDCBCFD413918082 /* HEAD */,
-				ED993FD1F4CECF04A9DBD8C6 /* refs */,
-			);
-			path = logs;
-			sourceTree = "<group>";
-		};
-		7BB57293285621A5AECB4119 /* 0925キラキラネームクイズ */ = {
-			isa = PBXGroup;
-			children = (
-				AA1729BCC092C8919330A3CA /* 0925キラキラネームクイズApp.swift */,
-				5D05D74C8F3C4277EB4F7CF9 /* ContentView.swift */,
-				2FB0F28EC88824BE72773B21 /* Info.plist */,
-			);
-			name = "0925キラキラネームクイズ";
-			path = .;
-			sourceTree = "<group>";
-		};
-		99C32680FBE20C353A009D34 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				B4B251722C6DF9BD8938A217 /* HomeView.swift */,
-				AE43CDAFDF685820C2839420 /* QuizView.swift */,
-				3C49D362D353856B4A4951EF /* ResultView.swift */,
+				1D35E327F2A4ECB7733B30A5 /* HomeView.swift */,
+				D1184B95660CEF7F07346C99 /* QuizView.swift */,
+				D926378C70C3BB4A557A892A /* ResultView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		9C7914B54C8B813BC065D214 /* Assets */ = {
+		C6CEC735AAF434923163E67C /* キラキラネームクイズ */ = {
 			isa = PBXGroup;
 			children = (
-				50C8B6F4BC05EADC77B5873A /* woman_illustration.png */,
+				4A1D344F202B20E5002B301D /* ContentView.swift */,
+				F950C6F33E9E1550FD35CD0A /* Info.plist */,
+				0FFA514E93AF6A9082732CA8 /* キラキラネームクイズApp.swift */,
+				D72C8C355A4B1FCD9385A33C /* Data */,
+				3F9BF87587928D50944E5091 /* Models */,
+				4F53B04D0FBEF7C6F91B7A90 /* Views */,
 			);
-			path = Assets;
+			path = "キラキラネームクイズ";
 			sourceTree = "<group>";
 		};
-		A9CC309EECEEA5A5FB327010 /* origin */ = {
+		D72C8C355A4B1FCD9385A33C /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				F2FF281AE8527784E3B9EEB6 /* HEAD */,
+				91206F7CB6934DEE36BD1C26 /* questions.json */,
 			);
-			path = origin;
+			path = Data;
 			sourceTree = "<group>";
 		};
-		CAF6FB539E35F7A8F147A89F /* Resources */ = {
+		E74308BD0FB8C4EB948D100C = {
 			isa = PBXGroup;
 			children = (
-				E3F468B9A16FBC63347DDFD0 /* Info.plist */,
-				9C7914B54C8B813BC065D214 /* Assets */,
-				E228D89CA66BF452DEBDA13C /* questions */,
+				C6CEC735AAF434923163E67C /* キラキラネームクイズ */,
+				03DF2AA153197D844131FEF4 /* Products */,
 			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		CD942603B8EF3D60834C7B2D /* origin */ = {
-			isa = PBXGroup;
-			children = (
-				4ACE3A112B4B5A08A1495EFE /* HEAD */,
-			);
-			path = origin;
-			sourceTree = "<group>";
-		};
-		CFBD906682BF518A514F6643 /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				189DF5A5EFB2C8462D257239 /* QuizRepository.swift */,
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
-		DD8A4E07CCF5DEFE61602AF6 /* remotes */ = {
-			isa = PBXGroup;
-			children = (
-				CD942603B8EF3D60834C7B2D /* origin */,
-			);
-			path = remotes;
-			sourceTree = "<group>";
-		};
-		E228D89CA66BF452DEBDA13C /* questions */ = {
-			isa = PBXGroup;
-			children = (
-				CE4F3347E28187F69D41682C /* coordinator_1.json */,
-				4602C7A3D34CB32272E10EC8 /* coordinator_2.json */,
-				0F796F48E98FBF8E52E3EDE2 /* counseling_1.json */,
-				90E4D449F4F3DF83C8F2C85E /* counseling_2.json */,
-				A486378DF17AEC2B79383213 /* environment_1.json */,
-				299DA27A3DAEAFA9B7E1A895 /* environment_2.json */,
-				71FFEB9702104F313134F149 /* general_legal_system.json */,
-				BB8C5CAE19AA46DA42FDE73E /* health_1.json */,
-				C1E0DF9967BF9E062EC14B66 /* health_2.json */,
-				36F883C84DBCCF1A6EDEB352 /* office_physical_security.json */,
-				659B0D8592A519C7B77EB8F1 /* organizational_human_security.json */,
-				835933D52AB570B036486A28 /* personal_data_duties.json */,
-				B4B4120653528D192787B338 /* personal_data_obligations.json */,
-				D686FF7C036F25B1C4783204 /* personal_data_obligations.json.bak-20250923-125252 */,
-				2870C6C4FF27B94BDFEABE53 /* personal_data_obligations.json.bak-20250923-132228 */,
-				EB07B5BFA4EF3EE0EAB509B3 /* personal_data_obligations.json.bak-20250923-165107 */,
-				6104C90FCC16FD103E8756A0 /* personal_related_information.json */,
-				32D025C75DC4EBC0ED681258 /* privacy_law_understanding.json */,
-				59A039D0EBD2C276150FC5C2 /* threat_and_countermeasures.json */,
-				6BB302CB13D2274B45659D55 /* welfare_1.json */,
-				6C8FF0AD540C9DCAB1B4DBC4 /* welfare_2.json */,
-			);
-			path = questions;
-			sourceTree = "<group>";
-		};
-		E87D79A7B78E3ECAA27FFDCF /* heads */ = {
-			isa = PBXGroup;
-			children = (
-				668E4B180750296CA219DE39 /* main */,
-			);
-			path = heads;
-			sourceTree = "<group>";
-		};
-		ED993FD1F4CECF04A9DBD8C6 /* refs */ = {
-			isa = PBXGroup;
-			children = (
-				37EDDCDF29424A10D2C7F3CA /* heads */,
-				2A20D1B9BDCE3BB5AD371B6A /* remotes */,
-			);
-			path = refs;
-			sourceTree = "<group>";
-		};
-		FC34635009922F207ECEEDD2 /* hooks */ = {
-			isa = PBXGroup;
-			children = (
-				59684F2C057633B13EB8C498 /* applypatch-msg.sample */,
-				8D6BB24BEC52BC29E8DC5FC2 /* commit-msg.sample */,
-				32282BA1F78B7C82E312BF8D /* fsmonitor-watchman.sample */,
-				60A166F195940D9BB4F45D61 /* post-update.sample */,
-				CDDA3771B76AAF151437251E /* pre-applypatch.sample */,
-				65B2F30A7844B0244772955A /* pre-commit.sample */,
-				FEAD04892ACCDF9F5EC5E823 /* pre-merge-commit.sample */,
-				464F0476342E96CE27EC504E /* pre-push.sample */,
-				4FE608505C9E990B455CAA33 /* pre-rebase.sample */,
-				34D2FE2D8DE41DB59B487554 /* pre-receive.sample */,
-				07889D8B40DDE3EDFEF7B61B /* prepare-commit-msg.sample */,
-				5210AEB62B42625064EB0FB9 /* push-to-checkout.sample */,
-				87E2AA3C7EE5C4D80D1758D3 /* update.sample */,
-			);
-			path = hooks;
-			sourceTree = "<group>";
-		};
-		FF9E4EA21F02CBF6890B65CD /* objects */ = {
-			isa = PBXGroup;
-			children = (
-				29BA82A87A1E1DA57CD2107B /* pack */,
-			);
-			path = objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9A0D567B5BDC8DC980403486 /* 0925キラキラネームクイズ */ = {
+		B772210973161ADFE5856E30 /* キラキラネームクイズ */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6254B78317336C58AD29AD81 /* Build configuration list for PBXNativeTarget "0925キラキラネームクイズ" */;
+			buildConfigurationList = 4B7D4B8B2B5011545B9DA2BC /* Build configuration list for PBXNativeTarget "キラキラネームクイズ" */;
 			buildPhases = (
-				6C8ED287D775400F4E4BFEA3 /* Sources */,
-				A335EAF1BA3CA27E8760A60D /* Resources */,
+				35C7A4517CC84C1E1936CACD /* Sources */,
+				32C752A0F3974C4BEB0A27DC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "0925キラキラネームクイズ";
+			name = "キラキラネームクイズ";
 			packageProductDependencies = (
 			);
-			productName = "0925キラキラネームクイズ";
-			productReference = 75C7EF3A6DC9548EC5471AC4 /* 0925キラキラネームクイズ.app */;
+			productName = "キラキラネームクイズ";
+			productReference = 3CCEB09CE963EA3AA684E8BC /* キラキラネームクイズ.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1143D670578481A33590D9F1 /* Project object */ = {
+		A6545EAAA9F3A103D2D4F43F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
 			};
-			buildConfigurationList = 97595DA2A5B960B23072622E /* Build configuration list for PBXProject "キラキラネームクイズ" */;
+			buildConfigurationList = 63FA340B75E4286FC7454E50 /* Build configuration list for PBXProject "キラキラネームクイズ" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -464,193 +125,65 @@
 				Base,
 				en,
 			);
-			mainGroup = 21B37BE3E30E6705D0DC5A2A;
+			mainGroup = E74308BD0FB8C4EB948D100C;
 			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 1DE024012E84E88A0041EA39 /* Products */;
-					ProjectRef = CD08981046CDB04108C0BB79 /* 個人情報保護実務検定2級.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
-				9A0D567B5BDC8DC980403486 /* 0925キラキラネームクイズ */,
+				B772210973161ADFE5856E30 /* キラキラネームクイズ */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A335EAF1BA3CA27E8760A60D /* Resources */ = {
+		32C752A0F3974C4BEB0A27DC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67B880EFD02C156952D33202 /* CLAUDE.md in Resources */,
-				C74D6763A411047ECA2D34CA /* FK2QuizApp.xcodeproj in Resources */,
-				FD9D0405A8D63A931041F299 /* FK2QuizApp.xcworkspace in Resources */,
-				D659E5956D8B12D3DD1B743B /* Info.plist in Resources */,
-				5D98B707462428DA586E43C5 /* applypatch-msg.sample in Resources */,
-				051AC36654A33D2BECD0D97D /* commit-msg.sample in Resources */,
-				09D28DD8E2EDDEA0DDF1A5FF /* coordinator_1.json in Resources */,
-				748245EAAFE786D48E4DC3E6 /* coordinator_2.json in Resources */,
-				1EECB2BB7D2374D862DE7E4F /* counseling_1.json in Resources */,
-				8793C4097FD37C53F36AC4DD /* counseling_2.json in Resources */,
-				AF3519F9255569F5C7DF515E /* environment_1.json in Resources */,
-				29EE8606EA292C587D646611 /* environment_2.json in Resources */,
-				C298CD3485C744DDB0C9F41E /* fsmonitor-watchman.sample in Resources */,
-				671C8A9A2724B3D5714E9829 /* general_legal_system.json in Resources */,
-				AFD7E5C5CA222BA845A214A2 /* health_1.json in Resources */,
-				2C4098F507015B977F15A12D /* health_2.json in Resources */,
-				30990DE2DB658F624424F972 /* office_physical_security.json in Resources */,
-				9C11FCB42EB7EFE610315D8E /* organizational_human_security.json in Resources */,
-				8A1F77BA35E7EDC7F630C613 /* pack-34fbee71c66eb81957948609396a5761b12397a5.idx in Resources */,
-				D3DAD1F3B76090D5ACF108F0 /* pack-34fbee71c66eb81957948609396a5761b12397a5.pack in Resources */,
-				7C82E8199663978C55FC413D /* personal_data_duties.json in Resources */,
-				52B32458C8F1F17A3F5D0CB4 /* personal_data_obligations.json in Resources */,
-				73457B01C63833C00C8D94F1 /* personal_data_obligations.json.bak-20250923-125252 in Resources */,
-				2E869811ED9104CD0571D9D4 /* personal_data_obligations.json.bak-20250923-132228 in Resources */,
-				4D36C180EB9024FB84DEAD9A /* personal_data_obligations.json.bak-20250923-165107 in Resources */,
-				F28F2BBE27E3929DA1D4C772 /* personal_related_information.json in Resources */,
-				F8BEA31FDAB891A73CFF37F2 /* post-update.sample in Resources */,
-				6FF56679A7A8AD326E5521C2 /* pre-applypatch.sample in Resources */,
-				DA91E3D20DBFE2A4FC79E053 /* pre-commit.sample in Resources */,
-				08F9318C4A86E2225EC65697 /* pre-merge-commit.sample in Resources */,
-				1B45B64A08FC32F831BD65FE /* pre-push.sample in Resources */,
-				F03A13D2B58A401BC602B5AD /* pre-rebase.sample in Resources */,
-				DFF5E51A6B9655B0705D0F2E /* pre-receive.sample in Resources */,
-				9B9F56820D94F7E262437C02 /* prepare-commit-msg.sample in Resources */,
-				9496C9D896256C9CF9E5253D /* privacy_law_understanding.json in Resources */,
-				6D1917C788350B0CACF7107E /* push-to-checkout.sample in Resources */,
-				2C24364FC9765315805ACDE3 /* settings.local.json in Resources */,
-				B1724F98DB11230504B39DA7 /* threat_and_countermeasures.json in Resources */,
-				1227A066027E2906E95D558E /* update.sample in Resources */,
-				84D15FA2B068F553F4BBF36B /* welfare_1.json in Resources */,
-				DA0A1E18879FA95B9489C6EA /* welfare_2.json in Resources */,
-				66D595906CFB6FF5C3B793BF /* woman_illustration.png in Resources */,
-				B71E92001A212ABF8668C746 /* 個人情報保護実務検定2級.xcodeproj in Resources */,
+				5F027084BA66AB90958989E6 /* questions.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6C8ED287D775400F4E4BFEA3 /* Sources */ = {
+		35C7A4517CC84C1E1936CACD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86713188CB18F56BC83935B8 /* 0925キラキラネームクイズApp.swift in Sources */,
-				72E00477D2E4C4AFAACADA1E /* AdsManager.swift in Sources */,
-				E78E807D1B59C116B8E80E4E /* AppDelegate.swift in Sources */,
-				EC074EF2C4F44CFEACDB943B /* AppMain.swift in Sources */,
-				1A7E29921E03E21F272ECBE0 /* ContentView.swift in Sources */,
-				A95EE0261003A323C711BB0B /* HomeView.swift in Sources */,
-				E1B00D77BC9D370B9A58F7AE /* Question.swift in Sources */,
-				2EE348C18AD14056A9B543A9 /* QuizRepository.swift in Sources */,
-				D9D1066FB74A85D95C275B07 /* QuizTopic.swift in Sources */,
-				7B6DD74E21307BCB072DB11D /* QuizView.swift in Sources */,
-				4AEEE87B8CB057C518C18DC4 /* ResultView.swift in Sources */,
-				CCA51D44E9508629E4771E6E /* TopViewController.swift in Sources */,
+				28F37659647EC2E7BD49B6E3 /* ContentView.swift in Sources */,
+				B60B02A419405C29AC9D79C6 /* HomeView.swift in Sources */,
+				CCEBEDE7964AC55B4B500005 /* Question.swift in Sources */,
+				1DFB72CD5111EC6CE236E47B /* QuizCategory.swift in Sources */,
+				6EC97B00F0E92A370E297CF7 /* QuizView.swift in Sources */,
+				98323504EAD28C14BFAA245F /* ResultView.swift in Sources */,
+				1FFA58C3575D0DD69DE81AAF /* キラキラネームクイズApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		3DD6640885B030961AF77C3A /* Release */ = {
+		36A95722CAA315AA239A7C97 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				INFOPLIST_FILE = "キラキラネームクイズ/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.kirakira.quiz0925;
-				PRODUCT_NAME = "0925キラキラネームクイズ";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.kirakiraquiz0926;
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		49B7D7273572EA980CE1B45B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.kirakira.quiz0925;
-				PRODUCT_NAME = "0925キラキラネームクイズ";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 5.9;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		755F11F8AD92D3880B0E9A86 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		7585E7C1671A957BA6302A1D /* Debug */ = {
+		6856EB89DE13427AF0D1AFC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -701,7 +234,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -713,28 +245,101 @@
 			};
 			name = Debug;
 		};
+		D6441CBD0E528C4E554A9A56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "キラキラネームクイズ/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.kirakiraquiz0926;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		F9F57001FCDE694DB72A9EFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6254B78317336C58AD29AD81 /* Build configuration list for PBXNativeTarget "0925キラキラネームクイズ" */ = {
+		4B7D4B8B2B5011545B9DA2BC /* Build configuration list for PBXNativeTarget "キラキラネームクイズ" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				49B7D7273572EA980CE1B45B /* Debug */,
-				3DD6640885B030961AF77C3A /* Release */,
+				36A95722CAA315AA239A7C97 /* Debug */,
+				D6441CBD0E528C4E554A9A56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		97595DA2A5B960B23072622E /* Build configuration list for PBXProject "キラキラネームクイズ" */ = {
+		63FA340B75E4286FC7454E50 /* Build configuration list for PBXProject "キラキラネームクイズ" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7585E7C1671A957BA6302A1D /* Debug */,
-				755F11F8AD92D3880B0E9A86 /* Release */,
+				6856EB89DE13427AF0D1AFC6 /* Debug */,
+				F9F57001FCDE694DB72A9EFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 1143D670578481A33590D9F1 /* Project object */;
+	rootObject = A6545EAAA9F3A103D2D4F43F /* Project object */;
 }
