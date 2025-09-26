@@ -1,0 +1,21 @@
+name: キラキラネームクイズ
+options:
+  minimumXcodeGenVersion: 2.41.0
+targets:
+  キラキラネームクイズ:
+    type: application
+    platform: iOS
+    deploymentTarget: "15.0"
+    sources:
+      - キラキラネームクイズ
+    info:
+      path: キラキラネームクイズ/Info.plist
+      properties:
+        UILaunchScreen: {}
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.kirakiraquiz0926
+        TARGETED_DEVICE_FAMILY: 1
+        SWIFT_VERSION: 5.9
+scheme:
+  configVariants: []
