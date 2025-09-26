@@ -47,6 +47,12 @@ struct HomeView: View {
                         PrimaryQuizLink(title: "DQNネーム11-20", topic: .kiranameSet2)
 
                         PrimaryQuizLink(title: "DQNネーム21-30", topic: .kiranameSet3)
+
+                        PrimaryQuizLink(title: "男の子キラキラネーム1-10", topic: .boyKiraname1)
+
+                        PrimaryQuizLink(title: "男の子キラキラネーム11-20", topic: .boyKiraname2)
+
+                        PrimaryQuizLink(title: "男の子キラキラネーム21-30", topic: .boyKiraname3)
                     }
                     .padding(.horizontal, 20)
                     .padding(.vertical, 16)

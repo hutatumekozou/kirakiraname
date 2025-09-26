@@ -1,7 +1,7 @@
 import Foundation
 
 enum QuizTopic: CaseIterable, Identifiable {
-    case kiranameSet6, kiranameSet7, kiranameSet6_2, kiranameSet1, kiranameSet2, kiranameSet3
+    case kiranameSet6, kiranameSet7, kiranameSet6_2, kiranameSet1, kiranameSet2, kiranameSet3, boyKiraname1, boyKiraname2, boyKiraname3
 
     var id: String { fileName }
 
@@ -13,6 +13,9 @@ enum QuizTopic: CaseIterable, Identifiable {
         case .kiranameSet1:   return "DQNネーム1-10"
         case .kiranameSet2:   return "DQNネーム11-20"
         case .kiranameSet3:   return "DQNネーム21-30"
+        case .boyKiraname1:   return "男の子キラキラネーム1-10"
+        case .boyKiraname2:   return "男の子キラキラネーム11-20"
+        case .boyKiraname3:   return "男の子キラキラネーム21-30"
         }
     }
 
@@ -24,6 +27,9 @@ enum QuizTopic: CaseIterable, Identifiable {
         case .kiranameSet1:   return "quiz_kiraname_set4"
         case .kiranameSet2:   return "quiz_kiraname_set5"
         case .kiranameSet3:   return "quiz_kiraname_set6"
+        case .boyKiraname1:   return "quiz_kiraname_set7"
+        case .boyKiraname2:   return "quiz_kiraname_set8"
+        case .boyKiraname3:   return "quiz_kiraname_set9"
         }
     }
 }
