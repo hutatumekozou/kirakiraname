@@ -7,12 +7,12 @@ enum QuizTopic: CaseIterable, Identifiable {
 
     var title: String {
         switch self {
-        case .kiranameSet1:   return "Kiraname問題集 セット1"
-        case .kiranameSet2:   return "Kiraname問題集 セット2"
-        case .kiranameSet3:   return "Kiraname問題集 セット3"
-        case .kiranameSet4:   return "DQNネーム 30-21位"
-        case .kiranameSet5:   return "DQNネーム 20-11位"
-        case .kiranameSet6:   return "DQNネーム 10-1位"
+        case .kiranameSet1:   return "DQNネーム 30-21位"
+        case .kiranameSet2:   return "DQNネーム 20-11位"
+        case .kiranameSet3:   return "DQNネーム 10-1位"
+        case .kiranameSet4:   return "Kiraname問題集 セット4"
+        case .kiranameSet5:   return "Kiraname問題集 セット5"
+        case .kiranameSet6:   return "Kiraname問題集 セット6"
         }
     }
 
