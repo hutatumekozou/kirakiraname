@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    private let columns = [GridItem(.flexible()), GridItem(.flexible())]
+    private let columns = [GridItem(.flexible())]
 
     var body: some View {
         NavigationView {
@@ -39,7 +39,7 @@ struct HomeView: View {
                     
                     // クイズボタングリッド
                     ScrollView {
-                        LazyVGrid(columns: columns, spacing: 16) {
+                        LazyVStack(spacing: 16) {
                             ForEach(QuizTopic.allCases) { topic in
                                 NavigationLink(destination: QuizView(topic: topic)) {
                                     Text(topic.title)
