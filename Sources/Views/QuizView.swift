@@ -31,9 +31,14 @@ struct QuizView: View {
                             .fontWeight(.bold)
                             .foregroundColor(.black)
                         Spacer()
-                        Text("\(currentQuestionIndex + 1) / \(questions.count)")
-                            .font(.headline)
-                            .foregroundColor(.black)
+                        VStack(alignment: .trailing) {
+                            Text("\(currentQuestionIndex + 1) / \(questions.count)")
+                                .font(.headline)
+                                .foregroundColor(.black)
+                            Text("items:\(questions.count)")
+                                .font(.caption)
+                                .foregroundColor(.gray)
+                        }
                     }
                     .padding(.horizontal)
                     
@@ -150,6 +155,8 @@ struct QuizView: View {
     
     private func loadQuestions() {
         questions = QuizRepository.shared.loadQuestions(for: topic)
+        let usedFallback = questions.count >= 10 ? false : true
+        print("[UI] start items=\(questions.count) fallback=\(usedFallback)")
     }
     
     private func nextQuestion() {

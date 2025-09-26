@@ -1,0 +1,72 @@
+[
+  {
+    "title": "第11問",
+    "question": "「美望」の読みで挙がるのは？",
+    "choices": ["みのぞみ", "びぼう", "みぼ", "にゃも"],
+    "answerIndex": 3,
+    "explanation": "11位「美望＝にゃも」。"
+  },
+  {
+    "title": "第12問",
+    "question": "「奇跡」の\"キラキラ読み\"は？",
+    "choices": ["きせき", "きらら", "だいや", "みらくる"],
+    "answerIndex": 2,
+    "explanation": "12位「奇跡＝だいや」。"
+  },
+  {
+    "title": "第13問",
+    "question": "「杏奴」の読みとして紹介例があるのは？",
+    "choices": ["あんぬ", "きょうな", "あんど", "あずな"],
+    "answerIndex": 0,
+    "explanation": "13位「杏奴＝あんぬ」。"
+  },
+  {
+    "title": "第14問",
+    "question": "「祈愛」の\"キラキラ読み\"は？",
+    "choices": ["きあ", "のあ", "ここあ", "いのりあ"],
+    "answerIndex": 1,
+    "explanation": "14位「祈愛＝のあ」。"
+  },
+  {
+    "title": "第15問",
+    "question": "「男」の\"キラキラ読み\"で話題になったのは？",
+    "choices": ["だん", "おとこ", "あだむ", "まん"],
+    "answerIndex": 2,
+    "explanation": "15位「男＝あだむ」。"
+  },
+  {
+    "title": "第16問",
+    "question": "「頼音」の読みとして挙がるのは？",
+    "choices": ["らいおん", "らいと", "らいお", "らいん"],
+    "answerIndex": 0,
+    "explanation": "16位「頼音＝らいおん」。"
+  },
+  {
+    "title": "第17問",
+    "question": "「夢露」の\"キラキラ読み\"は？",
+    "choices": ["ゆめろ", "めろ", "むろ", "みろ"],
+    "answerIndex": 1,
+    "explanation": "17位「夢露＝めろ」。"
+  },
+  {
+    "title": "第18問",
+    "question": "「雅龍」の読みで紹介されるのは？",
+    "choices": ["まさたつ", "がりゅう", "がある", "みやりゅう"],
+    "answerIndex": 2,
+    "explanation": "18位「雅龍＝がある」。"
+  },
+  {
+    "title": "第19問",
+    "question": "「琉絆空」の\"キラキラ読み\"は？",
+    "choices": ["るばんくう", "りゅうばんくう", "るきあ", "るくあ"],
+    "answerIndex": 2,
+    "explanation": "19位「琉絆空＝るきあ」。"
+  },
+  {
+    "title": "第20問",
+    "question": "「黄熊」の読みとして有名なのは？",
+    "choices": ["きぐま", "ぷう", "くまき", "おうゆう"],
+    "answerIndex": 1,
+    "explanation": "20位「黄熊＝ぷう」。"
+  }
+]

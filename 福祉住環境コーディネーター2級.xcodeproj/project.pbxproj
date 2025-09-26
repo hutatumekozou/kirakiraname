@@ -131,6 +131,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 002C /* Build configuration list for PBXNativeTarget "福祉住環境コーディネーター2級" */;
 			buildPhases = (
+				014 /* Validate Quiz Resources */,
 				001S /* Sources */,
 				001F /* Frameworks */,
 				001R /* Resources */,
@@ -194,6 +195,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		014 /* Validate Quiz Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Validate Quiz Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -euo pipefail\nQDIR=\"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Resources/questions\"\n[ -d \"$QDIR\" ] || { echo \"ERROR: Resources/questions が無い（folder reference 不足）\"; exit 1; }\nneed=(quiz_kiraname_set1.json quiz_kiraname_set2.json quiz_kiraname_set3.json)\nfor f in \"${need[@]}\"; do\n  [ -f \"$QDIR/$f\" ] || { echo \"ERROR: $f が無い\"; exit 1; }\ndone\nif grep -rI -n $'\\xE2\\x80\\x9C\\|\\xE2\\x80\\x9D\\|\\xE2\\x80\\x98\\|\\xE2\\x80\\x99' \"$QDIR\" >/dev/null; then\n  echo \"ERROR: スマートクオート検出\"; exit 1\nfi\nfor f in \"${need[@]}\"; do\n  /usr/bin/python3 - <<'PY' \"$QDIR/$f\" || { echo \"ERROR: $f\"; exit 1; }\nimport json,sys\narr=json.load(open(sys.argv[1],'rb'))\nassert isinstance(arr,list) and len(arr)>=10, \"10問以上の配列が必要\"\nprint(\"OK\", sys.argv[1], len(arr))\nPY\ndone\necho \"All quiz resources OK.\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		001S /* Sources */ = {
