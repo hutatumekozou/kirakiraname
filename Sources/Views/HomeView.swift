@@ -1,68 +1,64 @@
 import SwiftUI
 
-struct HomeView: View {
-    private let columns = [GridItem(.flexible())]
+struct PrimaryQuizLink: View {
+    let title: String
+    let topic: QuizTopic
 
+    var body: some View {
+        NavigationLink(destination: QuizView(topic: topic)) {
+            Text(title)
+                .font(.title3.weight(.bold))
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
+                .foregroundColor(Color.blue)
+                .frame(maxWidth: .infinity, minHeight: 56, maxHeight: 64)
+                .padding(.horizontal, 4)
+                .background(
+                    RoundedRectangle(cornerRadius: 20, style: .continuous)
+                        .fill(Color.white)
+                        .shadow(color: Color.black.opacity(0.08), radius: 8, y: 2)
+                )
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel(Text(title))
+    }
+}
+
+struct HomeView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                // グラデーション背景
-                LinearGradient(
-                    gradient: Gradient(colors: [
-                        Color(red: 0.6, green: 0.8, blue: 1.0),
-                        Color(red: 0.4, green: 0.6, blue: 0.9)
-                    ]),
-                    startPoint: .topLeading,
-                    endPoint: .bottomTrailing
-                )
-                .ignoresSafeArea()
-                
-                VStack(spacing: 20) {
-                    // タイトルセクション
-                    VStack(spacing: 8) {
-                        Text("福祉住環境")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                            .foregroundColor(.black)
-                        
-                        Text("コーディネーター2級")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                            .foregroundColor(.black)
-                        
-                        Text("問題集")
-                            .font(.system(size: 48, weight: .bold))
-                            .fontWeight(.bold)
-                            .foregroundColor(.black)
+                // 桃色背景
+                Color(red: 1.0, green: 0.75, blue: 0.8)
+                    .ignoresSafeArea()
+
+                // コンテンツ本体（必要時のみスクロール）
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack(spacing: 12) {
+                        // 6つのクイズボタン
+                        PrimaryQuizLink(title: "Kiraname 問題集セット1", topic: .kiranameSet6)
+
+                        PrimaryQuizLink(title: "Kiraname 問題集セット2", topic: .kiranameSet7)
+
+                        PrimaryQuizLink(title: "Kiraname 問題集セット3", topic: .kiranameSet6_2)
+
+                        PrimaryQuizLink(title: "DQNネーム1-10", topic: .kiranameSet1)
+
+                        PrimaryQuizLink(title: "DQNネーム11-20", topic: .kiranameSet2)
+
+                        PrimaryQuizLink(title: "DQNネーム21-30", topic: .kiranameSet3)
                     }
-                    .padding(.top, 40)
-                    
-                    // クイズボタングリッド
-                    ScrollView {
-                        LazyVStack(spacing: 16) {
-                            ForEach(QuizTopic.allCases) { topic in
-                                NavigationLink(destination: QuizView(topic: topic)) {
-                                    Text(topic.title)
-                                        .font(.headline)
-                                        .foregroundColor(Color(red: 0.2, green: 0.4, blue: 0.8))
-                                        .frame(maxWidth: .infinity, minHeight: 72)
-                                        .background(Color.white)
-                                        .cornerRadius(16)
-                                        .shadow(color: .gray.opacity(0.3), radius: 4, x: 0, y: 2)
-                                }
-                                .buttonStyle(PlainButtonStyle())
-                            }
-                        }
-                        .padding(.horizontal, 16)
-                    }
-                    
-                    Spacer()
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 16)
+                    .frame(maxWidth: 560) // iPadで横に広がりすぎない
                 }
             }
-            .navigationBarHidden(true)
+            // iOS15でも使えるタイトル指定
+            .navigationBarTitle("キラキラネームクイズ", displayMode: .inline)
             .onAppear {
                 AdsManager.shared.preload()
             }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
