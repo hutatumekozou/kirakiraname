@@ -17,8 +17,10 @@
 		008 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108 /* HomeView.swift */; };
 		009 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109 /* QuizView.swift */; };
 		010 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110 /* ResultView.swift */; };
-		012 /* questions in Resources */ = {isa = PBXBuildFile; fileRef = 202 /* questions */; };
+		012 /* Resources/questions in Resources */ = {isa = PBXBuildFile; fileRef = 202 /* Resources/questions */; };
 		013 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 301 /* GoogleMobileAds */; };
+		1DD539432E8809E500AB3E71 /* Untitled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD539422E8809D700AB3E71 /* Untitled.swift */; };
+		1DD539452E880B3200AB3E71 /* 0927Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DD539442E880B3200AB3E71 /* 0927Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,8 +35,10 @@
 		108 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		109 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		110 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		1DD539422E8809D700AB3E71 /* Untitled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Untitled.swift; sourceTree = "<group>"; };
+		1DD539442E880B3200AB3E71 /* 0927Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = 0927Assets.xcassets; sourceTree = "<group>"; };
 		201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		202 /* questions */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources/questions; sourceTree = SOURCE_ROOT; };
+		202 /* Resources/questions */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources/questions; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +114,10 @@
 		400 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1DD539422E8809D700AB3E71 /* Untitled.swift */,
 				201 /* Info.plist */,
-				202 /* questions */,
+				202 /* Resources/questions */,
+				1DD539442E880B3200AB3E71 /* 0927Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -191,13 +197,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				012 /* questions in Resources */,
+				1DD539452E880B3200AB3E71 /* 0927Assets.xcassets in Resources */,
+				012 /* Resources/questions in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		014 /* Validate Quiz Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Validate Quiz Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/validate_quiz_resources.stamp",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -euxo pipefail\nAPP_RES=\"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\"\nQUIZ_MIN_COUNT=\"${QUIZ_MIN_COUNT:-1}\"\n\nCANDS_APP=(\n  \"${APP_RES}/questions\"\n  \"${APP_RES}/Resources/questions\"\n)\nCANDS_SRC=(\n  \"${SRCROOT}/Resources/questions\"\n)\n\nQDIR=\"\"\nfor d in \"${CANDS_APP[@]}\"; do [ -d \"$d\" ] && { QDIR=\"$d\"; break; }; done\nif [ -z \"${QDIR}\" ]; then\n  for d in \"${CANDS_SRC[@]}\"; do [ -d \"$d\" ] && { QDIR=\"$d\"; break; }; done\nfi\n\n[ -n \"$QDIR\" ] || { echo \"[QS][ERR] questions dir not found in .app nor SRCROOT\"; exit 3; }\n\necho \"[QS] QDIR=${QDIR}\"\nshopt -s nullglob\nFILES=( \"${QDIR}\"/quiz_*_set*.json )\n[ ${#FILES[@]} -ge 1 ] || { echo \"[QS][ERR] quiz_*_set*.json が1本もありません\"; exit 4; }\n\n# スマートクオート検出\nif /usr/bin/grep -rI -n $'\\xE2\\x80\\x9C\\|\\xE2\\x80\\x9D\\|\\xE2\\x80\\x98\\|\\xE2\\x80\\x99' \"${QDIR}\" >/dev/null; then\n  echo \"[QS][ERR] smart quotes detected\"; exit 5\nfi\n\nfor f in \"${FILES[@]}\"; do\n  echo \"[QS] Validate: $f (min=${QUIZ_MIN_COUNT})\"\n  /usr/bin/python3 - <<'PY' \"$f\" \"$QUIZ_MIN_COUNT\"\nimport json,sys\nminc=int(sys.argv[2])\nwith open(sys.argv[1],'rb') as fp:\n    data=json.load(fp)\nassert isinstance(data,list), \"配列ではありません\"\nassert len(data)>=minc, f\"{len(data)}問 < 最低{minc}問\"\nprint(\"[QS] OK\", sys.argv[1], \"count=\", len(data))\nPY\ndone\necho ok > \"${DERIVED_FILE_DIR}/validate_quiz_resources.stamp\"\necho \"[QS] All quiz resources OK.\"";
+		};
 		015 /* Stage Quiz Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -219,25 +245,6 @@
 			shellPath = /bin/sh;
 			shellScript = "set -euo pipefail\nSRC_DIR=\"${SRCROOT}/Resources/questions\"\nDST_DIR=\"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/questions\"\n\necho \"[STAGE] SRC_DIR=${SRC_DIR}\"\necho \"[STAGE] DST_DIR=${DST_DIR}\"\n\nif [ ! -d \"${SRC_DIR}\" ]; then\n  echo \"[STAGE][WARN] Source questions dir not found: ${SRC_DIR}\"\n  exit 0\nfi\n\n/bin/mkdir -p \"${DST_DIR}\"\n/usr/bin/rsync -a --delete \"${SRC_DIR}/\" \"${DST_DIR}/\"\n\n# 砂箱最適化：出力スタンプを残す\necho ok > \"${DERIVED_FILE_DIR}/stage_quiz_resources.stamp\"\necho \"[STAGE] Synced questions -> app bundle\"";
 		};
-		014 /* Validate Quiz Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Validate Quiz Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/validate_quiz_resources.stamp",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -euxo pipefail\nAPP_RES=\"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\"\nQUIZ_MIN_COUNT=\"${QUIZ_MIN_COUNT:-1}\"\n\nCANDS_APP=(\n  \"${APP_RES}/questions\"\n  \"${APP_RES}/Resources/questions\"\n)\nCANDS_SRC=(\n  \"${SRCROOT}/Resources/questions\"\n)\n\nQDIR=\"\"\nfor d in \"${CANDS_APP[@]}\"; do [ -d \"$d\" ] && { QDIR=\"$d\"; break; }; done\nif [ -z \"${QDIR}\" ]; then\n  for d in \"${CANDS_SRC[@]}\"; do [ -d \"$d\" ] && { QDIR=\"$d\"; break; }; done\nfi\n\n[ -n \"$QDIR\" ] || { echo \"[QS][ERR] questions dir not found in .app nor SRCROOT\"; exit 3; }\n\necho \"[QS] QDIR=${QDIR}\"\nshopt -s nullglob\nFILES=( \"${QDIR}\"/quiz_*_set*.json )\n[ ${#FILES[@]} -ge 1 ] || { echo \"[QS][ERR] quiz_*_set*.json が1本もありません\"; exit 4; }\n\n# スマートクオート検出\nif /usr/bin/grep -rI -n $'\\xE2\\x80\\x9C\\|\\xE2\\x80\\x9D\\|\\xE2\\x80\\x98\\|\\xE2\\x80\\x99' \"${QDIR}\" >/dev/null; then\n  echo \"[QS][ERR] smart quotes detected\"; exit 5\nfi\n\nfor f in \"${FILES[@]}\"; do\n  echo \"[QS] Validate: $f (min=${QUIZ_MIN_COUNT})\"\n  /usr/bin/python3 - <<'PY' \"$f\" \"$QUIZ_MIN_COUNT\"\nimport json,sys\nminc=int(sys.argv[2])\nwith open(sys.argv[1],'rb') as fp:\n    data=json.load(fp)\nassert isinstance(data,list), \"配列ではありません\"\nassert len(data)>=minc, f\"{len(data)}問 < 最低{minc}問\"\nprint(\"[QS] OK\", sys.argv[1], \"count=\", len(data))\nPY\ndone\necho ok > \"${DERIVED_FILE_DIR}/validate_quiz_resources.stamp\"\necho \"[QS] All quiz resources OK.\"";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -252,6 +259,7 @@
 				005 /* QuizTopic.swift in Sources */,
 				006 /* QuizRepository.swift in Sources */,
 				007 /* TopViewController.swift in Sources */,
+				1DD539432E8809E500AB3E71 /* Untitled.swift in Sources */,
 				008 /* HomeView.swift in Sources */,
 				009 /* QuizView.swift in Sources */,
 				010 /* ResultView.swift in Sources */,

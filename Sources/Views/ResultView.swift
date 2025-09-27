@@ -4,7 +4,7 @@ struct ResultStarPatternView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                ForEach(0..<15, id: \.self) { index in
+                ForEach(0..<15, id: \.self) { _ in
                     Image(systemName: "star.fill")
                         .foregroundColor(.white)
                         .font(.system(size: CGFloat.random(in: 12...20)))
@@ -25,11 +25,11 @@ struct ResultView: View {
     let totalQuestions: Int
     @Environment(\.dismiss) private var dismiss
     @Environment(\.presentationMode) var presentationMode
-    
+
     private var scorePercentage: Double {
         Double(correctAnswers) / Double(totalQuestions) * 100
     }
-    
+
     private var resultMessage: String {
         switch Int(scorePercentage) {
         case 0:
@@ -55,7 +55,6 @@ struct ResultView: View {
         case 100:
             return "【🎉全問読破！最強の読解力！🎉】 満点おめでとう！🙌💕 キラキラネームを完全攻略！あなたはもう、難読ネームに迷わない「最強ネームマスター」だよ！"
         default:
-            // その他の値（1-9, 11-19, 21-29, 31-39, 41-49, 51-59, 61-69, 71-79, 81-89, 91-99）
             switch scorePercentage {
             case 1...9:
                 return "【奇跡の0！】 逆にレアかも！😂✨ 推しネームは見つからなかったけど、ここからがドラマの始まりだよ！"
@@ -82,139 +81,106 @@ struct ResultView: View {
             }
         }
     }
-    
+
     private var illustrationColor: Color {
         switch scorePercentage {
-        case 81...100:
-            return Color.green
-        case 61...80:
-            return Color.blue
-        case 41...60:
-            return Color.orange
-        case 21...40:
-            return Color.purple
-        default: // 0-20%
-            return Color.pink
+        case 81...100: return .green
+        case 61...80:  return .blue
+        case 41...60:  return .orange
+        case 21...40:  return .purple
+        default:       return .pink
         }
     }
-    
+
     var body: some View {
         ZStack {
-            // 桃色背景
+            // 背景（全面）
             Color(red: 1.0, green: 0.75, blue: 0.8)
                 .ignoresSafeArea()
-
-            // 星の装飾
             ResultStarPatternView()
                 .ignoresSafeArea()
-            
-            VStack(spacing: 30) {
-                // タイトル
-                Text("クイズ結果")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .foregroundColor(.black)
-                
-                // トピック名
-                Text(topic.title)
-                    .font(.title2)
-                    .fontWeight(.medium)
-                    .foregroundColor(.black)
-                    .multilineTextAlignment(.center)
-                
-                // スコア表示
-                VStack(spacing: 15) {
-                    Text("\(correctAnswers) / \(totalQuestions)")
-                        .font(.system(size: 48, weight: .bold))
+
+            // コンテンツ（スクロール可能／安全域内に収める）
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack(spacing: 30) {
+                    Text("クイズ結果")
+                        .font(.largeTitle).fontWeight(.bold)
                         .foregroundColor(.black)
-                    
-                    Text(String(format: "%.0f%%", scorePercentage))
-                        .font(.title)
-                        .fontWeight(.semibold)
-                        .foregroundColor(.black)
-                }
-                .padding()
-                .background(Color.white.opacity(0.9))
-                .cornerRadius(20)
-                
-                // イラストと激励メッセージエリア
-                VStack(spacing: 15) {
-                    // メッセージ
-                    Text(resultMessage)
-                        .font(.title3)
-                        .fontWeight(.medium)
+
+                    Text(topic.title)
+                        .font(.title2).fontWeight(.medium)
                         .foregroundColor(.black)
                         .multilineTextAlignment(.center)
-                    
-                    // 可愛いキャラクターイラスト風
-                    ZStack {
-                        // カラフルな背景（キラキラ効果）
-                        RoundedRectangle(cornerRadius: 15)
-                            .fill(
-                                LinearGradient(
-                                    gradient: Gradient(colors: [
-                                        Color.pink.opacity(0.3),
-                                        Color.purple.opacity(0.3),
-                                        Color.blue.opacity(0.3)
-                                    ]),
-                                    startPoint: .topLeading,
-                                    endPoint: .bottomTrailing
-                                )
-                            )
-                            .frame(width: 180, height: 180)
 
-                        VStack(spacing: 8) {
-                            // 可愛いキャラクター
-                            HStack(spacing: 4) {
-                                Image(systemName: "sparkles")
-                                    .font(.system(size: 16))
-                                    .foregroundColor(.yellow)
-                                Image(systemName: "person.fill")
-                                    .font(.system(size: 50))
-                                    .foregroundColor(.purple)
-                                Image(systemName: "sparkles")
-                                    .font(.system(size: 16))
-                                    .foregroundColor(.yellow)
-                            }
-
-                            // ハートやユニコーンのアクセント
-                            HStack(spacing: 12) {
-                                Image(systemName: "heart.fill")
-                                    .font(.system(size: 20))
-                                    .foregroundColor(.pink)
-                                Image(systemName: "star.fill")
-                                    .font(.system(size: 18))
-                                    .foregroundColor(.yellow)
-                                Image(systemName: "heart.fill")
-                                    .font(.system(size: 20))
-                                    .foregroundColor(.pink)
-                            }
-                        }
-                        .frame(width: 180, height: 180)
+                    VStack(spacing: 15) {
+                        Text("\(correctAnswers) / \(totalQuestions)")
+                            .font(.system(size: 48, weight: .bold))
+                            .foregroundColor(.black)
+                        Text(String(format: "%.0f%%", scorePercentage))
+                            .font(.title).fontWeight(.semibold)
+                            .foregroundColor(.black)
                     }
+                    .padding()
+                    .background(Color.white.opacity(0.9))
+                    .cornerRadius(20)
+
+                    // 結果カード
+                    VStack(alignment: .leading, spacing: 16) {
+                        Text(resultMessage)
+                            .font(.body)
+                            .foregroundColor(.primary)
+                            .fixedSize(horizontal: false, vertical: true)
+
+                        HStack {
+                            Spacer()
+                            Image("yellow_star")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 40, height: 40)
+                                .opacity(0.8)
+                            Spacer()
+                        }
+                        .padding(.top, 8)
+
+                        Image("result_girl")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(maxWidth: .infinity)
+                            .clipped()
+                            .cornerRadius(16)
+                            .shadow(color: .black.opacity(0.06), radius: 6, y: 2)
+                    }
+                    .padding(20)
+                    .background(
+                        RoundedRectangle(cornerRadius: 24, style: .continuous)
+                            .fill(Color.white)
+                    )
                 }
-                .padding()
-                .background(Color.white.opacity(0.9))
-                .cornerRadius(20)
-                .shadow(color: .gray.opacity(0.2), radius: 5, x: 0, y: 2)
-                
-                Spacer()
-                
-                // ボタン
-                Button(action: {
-                    // 広告表示後に確実に初期画面（メニュー）に戻る
-                    AdsManager.shared.showInterstitialAndReturnToRoot()
-                }) {
-                    Text("最初に戻る")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .frame(maxWidth: .infinity, minHeight: 50)
-                        .background(Color(red: 0.2, green: 0.4, blue: 0.8))
-                        .cornerRadius(12)
-                }
+                .frame(maxWidth: 560)
+                .padding(.horizontal, 20)
+                .padding(.top, 12)
+                .padding(.bottom, 24) // 下部固定ボタンの逃げ
+                .frame(maxWidth: .infinity) // 中央寄せ
             }
-            .padding()
+        }
+        // 下部固定ボタン（安全域に自動で余白を追加）
+        .safeAreaInset(edge: .bottom) {
+            Button(action: {
+                AdsManager.shared.showInterstitialAndReturnToRoot()
+            }) {
+                Text("最初に戻る")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity, minHeight: 50)
+                    .background(Color(red: 0.2, green: 0.4, blue: 0.8))
+                    .cornerRadius(12)
+            }
+            .padding(.horizontal, 20)
+            .padding(.top, 8)
+            .background(Color.clear)
         }
         .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }
+
