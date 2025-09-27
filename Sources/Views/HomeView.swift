@@ -1,5 +1,24 @@
 import SwiftUI
 
+struct HomeStarPatternView: View {
+    var body: some View {
+        GeometryReader { geometry in
+            ZStack {
+                ForEach(0..<15, id: \.self) { index in
+                    Image(systemName: "star.fill")
+                        .foregroundColor(.white)
+                        .font(.system(size: CGFloat.random(in: 12...20)))
+                        .position(
+                            x: CGFloat.random(in: 20...(geometry.size.width - 20)),
+                            y: CGFloat.random(in: 50...(geometry.size.height - 50))
+                        )
+                        .opacity(0.6)
+                }
+            }
+        }
+    }
+}
+
 struct PrimaryQuizLink: View {
     let title: String
     let topic: QuizTopic
@@ -32,9 +51,16 @@ struct HomeView: View {
                 Color(red: 1.0, green: 0.75, blue: 0.8)
                     .ignoresSafeArea()
 
+                // 星の装飾
+                HomeStarPatternView()
+                    .ignoresSafeArea()
+
                 // コンテンツ本体（必要時のみスクロール）
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack(spacing: 12) {
+                        // 上部スペース追加（ボタンを下に配置）
+                        Spacer()
+                            .frame(height: 60)
                         // 6つのクイズボタン
                         PrimaryQuizLink(title: "Kiraname 問題集セット1", topic: .kiranameSet6)
 

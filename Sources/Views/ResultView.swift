@@ -1,5 +1,24 @@
 import SwiftUI
 
+struct ResultStarPatternView: View {
+    var body: some View {
+        GeometryReader { geometry in
+            ZStack {
+                ForEach(0..<15, id: \.self) { index in
+                    Image(systemName: "star.fill")
+                        .foregroundColor(.white)
+                        .font(.system(size: CGFloat.random(in: 12...20)))
+                        .position(
+                            x: CGFloat.random(in: 20...(geometry.size.width - 20)),
+                            y: CGFloat.random(in: 50...(geometry.size.height - 50))
+                        )
+                        .opacity(0.6)
+                }
+            }
+        }
+    }
+}
+
 struct ResultView: View {
     let topic: QuizTopic
     let correctAnswers: Int
@@ -43,16 +62,13 @@ struct ResultView: View {
     
     var body: some View {
         ZStack {
-            // グラデーション背景
-            LinearGradient(
-                gradient: Gradient(colors: [
-                    Color(red: 0.6, green: 0.8, blue: 1.0),
-                    Color(red: 0.4, green: 0.6, blue: 0.9)
-                ]),
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-            .ignoresSafeArea()
+            // 桃色背景
+            Color(red: 1.0, green: 0.75, blue: 0.8)
+                .ignoresSafeArea()
+
+            // 星の装飾
+            ResultStarPatternView()
+                .ignoresSafeArea()
             
             VStack(spacing: 30) {
                 // タイトル
