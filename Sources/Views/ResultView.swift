@@ -125,12 +125,23 @@ struct ResultView: View {
                     .cornerRadius(20)
 
                     // 結果カード
-                    VStack(alignment: .leading, spacing: 16) {
+                    VStack(alignment: .leading, spacing: 12) {
                         Text(resultMessage)
                             .font(.body)
                             .foregroundColor(.primary)
                             .fixedSize(horizontal: false, vertical: true)
 
+                        // 結果コメントの直下に画像を配置
+                        Image("result_girl")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(maxWidth: .infinity)
+                            .clipped()
+                            .cornerRadius(16)
+                            .shadow(color: .black.opacity(0.06), radius: 6, y: 2)
+                            .padding(.top, 4)
+
+                        // 装飾スターは画像の下へ
                         HStack {
                             Spacer()
                             Image("yellow_star")
@@ -141,14 +152,6 @@ struct ResultView: View {
                             Spacer()
                         }
                         .padding(.top, 8)
-
-                        Image("result_girl")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(maxWidth: .infinity)
-                            .clipped()
-                            .cornerRadius(16)
-                            .shadow(color: .black.opacity(0.06), radius: 6, y: 2)
                     }
                     .padding(20)
                     .background(
@@ -159,7 +162,7 @@ struct ResultView: View {
                 .frame(maxWidth: 560)
                 .padding(.horizontal, 20)
                 .padding(.top, 12)
-                .padding(.bottom, 24) // 下部固定ボタンの逃げ
+                .padding(.bottom, 120) // 下部固定ボタンの逃げ
                 .frame(maxWidth: .infinity) // 中央寄せ
             }
         }
