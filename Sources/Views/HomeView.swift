@@ -58,21 +58,29 @@ struct HomeView: View {
                 // コンテンツ本体（必要時のみスクロール）
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack(spacing: 12) {
-                        // 上部スペース追加（ボタンを下に配置）
-                        Spacer()
-                            .frame(height: 60)
-                        // 6つのクイズボタン
-                        PrimaryQuizLink(title: "Kiraname 問題集セット1", topic: .kiranameSet6)
+                        // タイトル表示
+                        VStack(spacing: 4) {
+                            Text("キラキラネーム")
+                                .font(.system(size: 32, weight: .black))
+                                .foregroundColor(.black)
+                            Text("クイズ")
+                                .font(.system(size: 32, weight: .black))
+                                .foregroundColor(.black)
+                        }
+                        .padding(.top, 60)
+                        .padding(.bottom, 20)
+                        // 9つのクイズボタン
+                        PrimaryQuizLink(title: "人気キラキラネーム-1", topic: .kiranameSet6)
 
-                        PrimaryQuizLink(title: "Kiraname 問題集セット2", topic: .kiranameSet7)
+                        PrimaryQuizLink(title: "人気キラキラネーム-2", topic: .kiranameSet7)
 
-                        PrimaryQuizLink(title: "Kiraname 問題集セット3", topic: .kiranameSet6_2)
+                        PrimaryQuizLink(title: "人気キラキラネーム-3", topic: .kiranameSet6_2)
 
-                        PrimaryQuizLink(title: "DQNネーム1-10", topic: .kiranameSet1)
+                        PrimaryQuizLink(title: "女の子キラキラネーム 1-10", topic: .kiranameSet1)
 
-                        PrimaryQuizLink(title: "DQNネーム11-20", topic: .kiranameSet2)
+                        PrimaryQuizLink(title: "女の子キラキラネーム 11-20", topic: .kiranameSet2)
 
-                        PrimaryQuizLink(title: "DQNネーム21-30", topic: .kiranameSet3)
+                        PrimaryQuizLink(title: "女の子キラキラネーム 21-30", topic: .kiranameSet3)
 
                         PrimaryQuizLink(title: "男の子キラキラネーム1-10", topic: .boyKiraname1)
 
@@ -85,8 +93,7 @@ struct HomeView: View {
                     .frame(maxWidth: 560) // iPadで横に広がりすぎない
                 }
             }
-            // iOS15でも使えるタイトル指定
-            .navigationBarTitle("キラキラネームクイズ", displayMode: .inline)
+            .navigationBarHidden(true)
             .onAppear {
                 AdsManager.shared.preload()
             }

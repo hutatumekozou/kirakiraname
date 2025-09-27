@@ -31,17 +31,55 @@ struct ResultView: View {
     }
     
     private var resultMessage: String {
-        switch scorePercentage {
-        case 81...100:
-            return "素晴らしい！完璧に理解されています！\nこの調子で頑張ってください！"
-        case 61...80:
-            return "よくできました！\nもう少し勉強すれば満点も夢じゃありません！"
-        case 41...60:
-            return "まずまずの結果ですね。\n基礎をしっかり固めて再挑戦しましょう！"
-        case 21...40:
-            return "もう少し頑張りましょう！\n諦めずに勉強を続ければ必ず上達します！"
-        default: // 0-20%
-            return "大丈夫です、最初は誰でもこんなものです。\n一歩ずつ着実に学んでいきましょう！"
+        switch Int(scorePercentage) {
+        case 0:
+            return "【奇跡の0！】 逆にレアかも！😂✨ 推しネームは見つからなかったけど、ここからがドラマの始まりだよ！"
+        case 10:
+            return "【かすかに光る✨】 まず1問クリア、おめでとう！この1問はきっと「超難関」ネーム。次こそはトレンド入りネームを狙おう！"
+        case 20:
+            return "【もったいなーい！】 あとちょっとで読めてたはず！🥺 もうすぐ流行ネームの読み方がわかるよ。次こそは「わかる！」ってスッキリしちゃおう！"
+        case 30:
+            return "【センスの予感！】 3割正解はすごい！もうキラキラネームの「あるあるパターン」が見えてきたはず！この調子で読解力UPしちゃお！"
+        case 40:
+            return "【もうすぐ半分💖】 あと一歩で折り返し！ここまで来たら、残りの問題もぜ〜んぶ読めちゃう気がしない？ファイト！"
+        case 50:
+            return "【推し認定レベル！🏅】 ちょうど半分クリア、神すぎ！✨ 難読ネームを半分読破って、結構な特技だよ。ここからもっと正解率を爆上げしよ！"
+        case 60:
+            return "【ネーム通すぎる件。】 半分以上正解は天才！もはやあなたは「名付けのプロ」か「難読ネーム評論家」！このままGO！"
+        case 70:
+            return "【めっちゃいい感じ！】 7割正解ってすごすぎ！もう誰も読めないネームもスラスラ読めちゃうレベル。自信持って、満点目指して！"
+        case 80:
+            return "【あと少しでカンペキ！】 素晴らしい結果！✨ もう「読めないネームはない」と言っても過言じゃない！満点まであと少しの努力を！"
+        case 90:
+            return "【惜しすぎる！😭】 ほぼ満点、悔しいー！でもこの正解率はレジェンド級。次のチャレンジでは絶対100点満点とっちゃおう！"
+        case 100:
+            return "【🎉全問読破！最強の読解力！🎉】 満点おめでとう！🙌💕 キラキラネームを完全攻略！あなたはもう、難読ネームに迷わない「最強ネームマスター」だよ！"
+        default:
+            // その他の値（1-9, 11-19, 21-29, 31-39, 41-49, 51-59, 61-69, 71-79, 81-89, 91-99）
+            switch scorePercentage {
+            case 1...9:
+                return "【奇跡の0！】 逆にレアかも！😂✨ 推しネームは見つからなかったけど、ここからがドラマの始まりだよ！"
+            case 11...19:
+                return "【かすかに光る✨】 まず1問クリア、おめでとう！この1問はきっと「超難関」ネーム。次こそはトレンド入りネームを狙おう！"
+            case 21...29:
+                return "【もったいなーい！】 あとちょっとで読めてたはず！🥺 もうすぐ流行ネームの読み方がわかるよ。次こそは「わかる！」ってスッキリしちゃおう！"
+            case 31...39:
+                return "【センスの予感！】 3割正解はすごい！もうキラキラネームの「あるあるパターン」が見えてきたはず！この調子で読解力UPしちゃお！"
+            case 41...49:
+                return "【もうすぐ半分💖】 あと一歩で折り返し！ここまで来たら、残りの問題もぜ〜んぶ読めちゃう気がしない？ファイト！"
+            case 51...59:
+                return "【推し認定レベル！🏅】 ちょうど半分クリア、神すぎ！✨ 難読ネームを半分読破って、結構な特技だよ。ここからもっと正解率を爆上げしよ！"
+            case 61...69:
+                return "【ネーム通すぎる件。】 半分以上正解は天才！もはやあなたは「名付けのプロ」か「難読ネーム評論家」！このままGO！"
+            case 71...79:
+                return "【めっちゃいい感じ！】 7割正解ってすごすぎ！もう誰も読めないネームもスラスラ読めちゃうレベル。自信持って、満点目指して！"
+            case 81...89:
+                return "【あと少しでカンペキ！】 素晴らしい結果！✨ もう「読めないネームはない」と言っても過言じゃない！満点まであと少しの努力を！"
+            case 91...99:
+                return "【惜しすぎる！😭】 ほぼ満点、悔しいー！でもこの正解率はレジェンド級。次のチャレンジでは絶対100点満点とっちゃおう！"
+            default:
+                return "【奇跡の0！】 逆にレアかも！😂✨ 推しネームは見つからなかったけど、ここからがドラマの始まりだよ！"
+            }
         }
     }
     
@@ -108,21 +146,51 @@ struct ResultView: View {
                         .foregroundColor(.black)
                         .multilineTextAlignment(.center)
                     
-                    // 女性のイラスト
-                    if let uiImage = UIImage(named: "woman_illustration") ?? 
-                       UIImage(contentsOfFile: Bundle.main.path(forResource: "woman_illustration", ofType: "png") ?? "") ?? 
-                       UIImage(contentsOfFile: "/Users/kukkiiboy/Desktop/Claude code/FK2QuizApp/Resources/Assets/woman_illustration.png") {
-                        Image(uiImage: uiImage)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 200, height: 200)
-                            .clipShape(RoundedRectangle(cornerRadius: 15))
-                    } else {
-                        // フォールバック用のSF Symbol
-                        Image(systemName: "figure.seated.side")
-                            .font(.system(size: 120))
-                            .foregroundColor(illustrationColor)
-                            .frame(width: 200, height: 200)
+                    // 可愛いキャラクターイラスト風
+                    ZStack {
+                        // カラフルな背景（キラキラ効果）
+                        RoundedRectangle(cornerRadius: 15)
+                            .fill(
+                                LinearGradient(
+                                    gradient: Gradient(colors: [
+                                        Color.pink.opacity(0.3),
+                                        Color.purple.opacity(0.3),
+                                        Color.blue.opacity(0.3)
+                                    ]),
+                                    startPoint: .topLeading,
+                                    endPoint: .bottomTrailing
+                                )
+                            )
+                            .frame(width: 180, height: 180)
+
+                        VStack(spacing: 8) {
+                            // 可愛いキャラクター
+                            HStack(spacing: 4) {
+                                Image(systemName: "sparkles")
+                                    .font(.system(size: 16))
+                                    .foregroundColor(.yellow)
+                                Image(systemName: "person.fill")
+                                    .font(.system(size: 50))
+                                    .foregroundColor(.purple)
+                                Image(systemName: "sparkles")
+                                    .font(.system(size: 16))
+                                    .foregroundColor(.yellow)
+                            }
+
+                            // ハートやユニコーンのアクセント
+                            HStack(spacing: 12) {
+                                Image(systemName: "heart.fill")
+                                    .font(.system(size: 20))
+                                    .foregroundColor(.pink)
+                                Image(systemName: "star.fill")
+                                    .font(.system(size: 18))
+                                    .foregroundColor(.yellow)
+                                Image(systemName: "heart.fill")
+                                    .font(.system(size: 20))
+                                    .foregroundColor(.pink)
+                            }
+                        }
+                        .frame(width: 180, height: 180)
                     }
                 }
                 .padding()
