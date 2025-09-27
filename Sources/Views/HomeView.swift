@@ -55,18 +55,15 @@ struct HomeView: View {
                 HomeStarPatternView()
                     .ignoresSafeArea()
 
-                // コンテンツ本体（必要時のみスクロール）
-                ScrollView(.vertical, showsIndicators: false) {
-                    VStack(spacing: 12) {
-                        // タイトル表示
-                        VStack(spacing: 4) {
-                            Text("キラキラネーム")
-                                .font(.system(size: 32, weight: .black))
-                                .foregroundColor(.black)
-                            Text("クイズ")
-                                .font(.system(size: 32, weight: .black))
-                                .foregroundColor(.black)
-                        }
+                // コンテンツ本体（縦スクロール可能）
+                ScrollView(.vertical, showsIndicators: true) {
+                    LazyVStack(spacing: 12) {
+                        // 新タイトル（2行目は先頭に半角スペース2つ）
+                        Text("🌟 キラキラ🌟\n  ネームクイズ")
+                            .font(.system(size: 46, weight: .heavy))   // 66 × 0.7 = 46pt
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(.black)
+                            .padding(.top, -40)                         // 位置は現状のまま
                         .padding(.top, 60)
                         .padding(.bottom, 20)
                         // 9つのクイズボタン
@@ -89,7 +86,8 @@ struct HomeView: View {
                         PrimaryQuizLink(title: "男の子キラキラネーム21-30", topic: .boyKiraname3)
                     }
                     .padding(.horizontal, 20)
-                    .padding(.vertical, 16)
+                    .padding(.top, 16)
+                    .padding(.bottom, 40)    // 最下部がホームバーに隠れないよう余白
                     .frame(maxWidth: 560) // iPadで横に広がりすぎない
                 }
             }
